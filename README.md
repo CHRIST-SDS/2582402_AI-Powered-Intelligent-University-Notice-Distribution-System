@@ -600,9 +600,59 @@ Delivered Email
 
 ## 📸 Application Screenshots
 
-### 1. Home Page
+### Screenshots
 
 ![Screenshots](docs/screenshots)
+**File:** `docs/screenshots`
+
+### 2. Upload Student Excel
+
+**File:** `docs/screenshots/upload_student_excel.png`
+
+### 3. Upload Poster with Credentials
+
+
+**File:** `docs/screenshots/upload_poster_with_credentials.png`
+
+### 4. Poster Metadata
+
+**File:** `docs/screenshots/Poster_metadata.png`
+
+### 5. RAG Question
+
+**File:** `docs/screenshots/rag_question.png`
+
+### 6. RAG Question Answer
+
+**File:** `docs/screenshots/rag-question_answer.png`
+
+### 7. Email Generator
+
+**File:** `docs/screenshots/email_generator_1.png`
+
+### 8. Generated Image
+
+**File:** `docs/screenshots/generated_image.png`
+
+### 9. Email Attachment Confirmation
+
+**File:** `docs/screenshots/mail_attachment_confirmation.png`
+
+### 10. Review Email Drafts
+
+**File:** `docs/screenshots/review_email_drafts.png`
+
+### 11. Send Mail
+
+**File:** `docs/screenshots/send_mail.png`
+
+### 12. Mail Send Confirmation
+
+**File:** `docs/screenshots/mail_send_confirmation.png`
+
+### 13. Gmail Received Mail
+
+**File:** `docs/screenshots/mail_gmail_received.png`
 
 ---
 
