@@ -176,6 +176,9 @@ The communication proceeds to delivery only after confirmation.
 ---
 
 ## 🏗️ System Architecture
+![Architecture](docs/architecture/architecture.png)
+
+---
 
 ```text
                     University Poster
@@ -221,6 +224,7 @@ The communication proceeds to delivery only after confirmation.
                                     v
                          Email Delivery Status
 ```
+
 
 ### Critical Workflow Order
 
@@ -595,10 +599,6 @@ Delivered Email
 12. Review the complete email and attachments.
 13. Confirm the communication.
 14. Send the confirmed email through Gmail SMTP.
-
----
-## Architecture 
-![Architecture](docs/architecture/architecture.png)
 
 ---
 
