@@ -64,15 +64,6 @@ input/
 temp/
 tmp/
 
-*.pdf
-*.docx
-*.txt
-*.png
-*.jpg
-*.jpeg
-*.bmp
-*.tiff
-*.webp
 
 # ==========================================================
 # Generated Outputs
