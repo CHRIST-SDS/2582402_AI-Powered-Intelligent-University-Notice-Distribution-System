@@ -608,47 +608,47 @@ Delivered Email
 
 ### 2. Upload Poster and Credentials
 
-![Upload Poster Interface](upload_poster_interface_with_credentials.png)
+![Upload Poster Interface](docs/Screenshots/upload_poster_interface_with_credentials.png)
 
 ### 3. Upload Student Excel File
 
-![Upload Student Excel](upload_student_excel.png)
+![Upload Student Excel](docs/Screenshots/upload_student_excel.png)
 
 ### 4. Extracted Poster Metadata
 
-![Poster Metadata](Poster_metadata.png)
+![Poster Metadata](docs/Screenshots/Poster_metadata.png)
 
 ### 5. RAG Question
 
-![RAG Question](rag_question.png)
+![RAG Question](docs/Screenshots/rag_question.png)
 
 ### 6. RAG Question Answer
 
-![RAG Question Answer](rag_question_answer.png)
+![RAG Question Answer](docs/Screenshots/rag_question_answer.png)
 
 ### 7. Generated Personalized Email
 
-![Email Generator](email_generator_1.png)
+![Email Generator](docs/Screenshots/email_generator_1.png)
 
 ### 8. Review Email Drafts
 
-![Review Email Drafts](review_email_drafts.png)
+![Review Email Drafts](docs/Screenshots/review_email_drafts.png)
 
 ### 9. Generated AI Image
 
-![Generated AI Image](generated_image.png)
+![Generated AI Image](docs/Screenshots/generated_image.png)
 
 ### 10. Email Review and Attachment Confirmation
 
-![Mail Attachment Confirmation](mail_attachment_confirmation.png)
+![Mail Attachment Confirmation](docs/Screenshots/mail_attachment_confirmation.png)
 
 ### 11. Send Mail Confirmation
 
-![Send Mail Confirmation](mail_send_confirmation.png)
+![Send Mail Confirmation](docs/Screenshots/mail_send_confirmation.png)
 
 ### 12. Gmail Received Email
 
-![Gmail Received Email](mail_gmail_received.png)
+![Gmail Received Email](docs/Screenshots/mail_gmail_received.png)
 
 ---
 
