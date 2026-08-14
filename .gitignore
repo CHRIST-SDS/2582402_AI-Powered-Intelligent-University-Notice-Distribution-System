@@ -1,0 +1,176 @@
+# ==========================================================
+# Python
+# ==========================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+*.venv/
+
+# Conda environments
+.conda/
+
+# ==========================================================
+# Environment & Credentials
+# ==========================================================
+
+.env
+.env.*
+!.env.example
+
+# Credentials / secrets
+*.pem
+*.key
+secrets/
+credentials/
+credentials.json
+
+# ==========================================================
+# Streamlit
+# ==========================================================
+
+.streamlit/secrets.toml
+
+# ==========================================================
+# Data & Private Student Information
+# ==========================================================
+
+data/input/
+data/private/
+data/student_data/
+data/*.xlsx
+data/*.xls
+data/*.csv
+
+# Keep example/sample data if you intentionally have one
+!data/sample/
+!data/example/
+
+# ==========================================================
+# Uploaded Posters / Documents
+# ==========================================================
+
+uploads/
+uploaded_files/
+input/
+temp/
+tmp/
+
+*.pdf
+*.docx
+*.txt
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.webp
+
+# ==========================================================
+# Generated Outputs
+# ==========================================================
+
+outputs/*
+!outputs/.gitkeep
+
+generated/
+generated_images/
+generated_emails/
+
+# ==========================================================
+# Local AI / Model Files
+# ==========================================================
+
+models/*
+!models/.gitkeep
+
+*.gguf
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.bin
+
+# Ollama local files
+.ollama/
+
+# Stable Diffusion / Forge generated files
+webui/outputs/
+webui/models/
+webui/logs/
+
+# ==========================================================
+# Vector Database / RAG Storage
+# ==========================================================
+
+chroma/
+chromadb/
+vector_store/
+vector_db/
+*.sqlite
+*.sqlite3
+
+# ==========================================================
+# Logs
+# ==========================================================
+
+*.log
+logs/
+
+# ==========================================================
+# Jupyter
+# ==========================================================
+
+.ipynb_checkpoints/
+
+# ==========================================================
+# IDE / Editors
+# ==========================================================
+
+.vscode/
+.idea/
+*.code-workspace
+
+# ==========================================================
+# OS Generated Files
+# ==========================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================================
+# Build / Distribution
+# ==========================================================
+
+build/
+dist/
+*.egg-info/
+
+# ==========================================================
+# Temporary Files
+# ==========================================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==========================================================
+# Demo / Large Local Files
+# ==========================================================
+
+*.mov
+*.avi
+*.mkv
+*.webm
