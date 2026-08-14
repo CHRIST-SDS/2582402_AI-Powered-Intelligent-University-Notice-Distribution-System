@@ -602,57 +602,55 @@ Delivered Email
 
 ### Screenshots
 
-![Screenshots](docs/screenshots)
-**File:** `docs/screenshots`
+## Screenshots
 
-### 2. Upload Student Excel
+### 1. Home Page
 
-**File:** `docs/screenshots/upload_student_excel.png`
+![Home Page](home_page.png)
 
-### 3. Upload Poster with Credentials
+### 2. Upload Poster and Credentials
 
+![Upload Poster Interface](upload_poster_interface_with_credentials.png)
 
-**File:** `docs/screenshots/upload_poster_with_credentials.png`
+### 3. Upload Student Excel File
 
-### 4. Poster Metadata
+![Upload Student Excel](upload_student_excel.png)
 
-**File:** `docs/screenshots/Poster_metadata.png`
+### 4. Extracted Poster Metadata
+
+![Poster Metadata](Poster_metadata.png)
 
 ### 5. RAG Question
 
-**File:** `docs/screenshots/rag_question.png`
+![RAG Question](rag_question.png)
 
 ### 6. RAG Question Answer
 
-**File:** `docs/screenshots/rag-question_answer.png`
+![RAG Question Answer](rag_question_answer.png)
 
-### 7. Email Generator
+### 7. Generated Personalized Email
 
-**File:** `docs/screenshots/email_generator_1.png`
+![Email Generator](email_generator_1.png)
 
-### 8. Generated Image
+### 8. Review Email Drafts
 
-**File:** `docs/screenshots/generated_image.png`
+![Review Email Drafts](review_email_drafts.png)
 
-### 9. Email Attachment Confirmation
+### 9. Generated AI Image
 
-**File:** `docs/screenshots/mail_attachment_confirmation.png`
+![Generated AI Image](generated_image.png)
 
-### 10. Review Email Drafts
+### 10. Email Review and Attachment Confirmation
 
-**File:** `docs/screenshots/review_email_drafts.png`
+![Mail Attachment Confirmation](mail_attachment_confirmation.png)
 
-### 11. Send Mail
+### 11. Send Mail Confirmation
 
-**File:** `docs/screenshots/send_mail.png`
+![Send Mail Confirmation](mail_send_confirmation.png)
 
-### 12. Mail Send Confirmation
+### 12. Gmail Received Email
 
-**File:** `docs/screenshots/mail_send_confirmation.png`
-
-### 13. Gmail Received Mail
-
-**File:** `docs/screenshots/mail_gmail_received.png`
+![Gmail Received Email](mail_gmail_received.png)
 
 ---
 
