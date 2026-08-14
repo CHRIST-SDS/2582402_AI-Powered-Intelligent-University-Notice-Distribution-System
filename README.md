@@ -655,7 +655,7 @@ Delivered Email
 
 A complete end-to-end demonstration of the AI-Powered Intelligent University Notice Distribution System is available here:
 
-**[▶️ View Demo Video](demo/demo1.mp4)**
+**[▶️ View Demo Video](demo/demo_3mb.mp4)**
 
 The demonstration covers poster upload, OCR and vision processing, metadata extraction, RAG question answering, student matching, personalized email generation, local AI image generation, email review, user confirmation, and Gmail delivery.
 
