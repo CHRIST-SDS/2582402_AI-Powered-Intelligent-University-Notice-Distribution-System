@@ -602,11 +602,9 @@ Delivered Email
 
 ### Screenshots
 
-## Screenshots
-
 ### 1. Home Page
 
-![Home Page](home_page.png)
+![Home Page](docs/Screenshots/home_page.png)
 
 ### 2. Upload Poster and Credentials
 
