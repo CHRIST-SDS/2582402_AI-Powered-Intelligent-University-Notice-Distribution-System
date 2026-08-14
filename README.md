@@ -597,6 +597,10 @@ Delivered Email
 14. Send the confirmed email through Gmail SMTP.
 
 ---
+## Architecture 
+![Architecture](docs/architecture/architecture.png)
+
+---
 
 ## 📸 Application Screenshots
 
