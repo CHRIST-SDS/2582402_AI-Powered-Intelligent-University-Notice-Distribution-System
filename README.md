@@ -650,6 +650,9 @@ Delivered Email
 
 ![Gmail Received Email](docs/Screenshots/mail_gmail_received.png)
 
+## 13. Mail Attachment Confirmation 
+![Mail Attachment Confirmation](docs/Screenshots/mail_attachment_confirmation.png)
+
 ---
 
 ## 🔐 Security
