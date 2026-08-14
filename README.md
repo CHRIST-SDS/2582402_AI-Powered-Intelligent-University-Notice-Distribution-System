@@ -638,19 +638,15 @@ Delivered Email
 
 ![Generated AI Image](docs/Screenshots/generated_image.png)
 
-### 10. Email Review and Attachment Confirmation
-
-![Mail Attachment Confirmation](docs/Screenshots/mail_attachment_confirmation.png)
-
-### 11. Send Mail Confirmation
+### 10. Send Mail Confirmation
 
 ![Send Mail Confirmation](docs/Screenshots/mail_send_confirmation.png)
 
-### 12. Gmail Received Email
+### 11. Gmail Received Email
 
 ![Gmail Received Email](docs/Screenshots/mail_gmail_received.png)
 
-## 13. Mail Attachment Confirmation 
+## 12. Mail Attachment Confirmation 
 ![Mail Attachment Confirmation](docs/Screenshots/mail_attachment_confirmation.png)
 
 ---
