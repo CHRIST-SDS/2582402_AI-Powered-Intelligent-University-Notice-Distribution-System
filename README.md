@@ -608,11 +608,11 @@ Delivered Email
 
 ### 1. Home Page
 
-![Home Page](docs/Screenshots/home_page.png)
+![Home Page](./docs/Screenshots/home_page.png)
 
 ### 2. Upload Poster and Credentials
 
-![Upload Poster Interface](docs/Screenshots/upload_poster_interface_with_credentials.png)
+![Upload Poster Interface](./docs/Screenshots/upload_poster_interface_with_credentials.png)
 
 ### 3. Upload Student Excel File
 
