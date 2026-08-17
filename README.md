@@ -2,7 +2,7 @@
 
 > A university-focused Generative AI application that converts unstructured event posters into structured information, retrieves relevant information using RAG, identifies suitable students, generates personalized emails, creates a supporting image locally, and sends the approved communication through Gmail SMTP.
 
-**Submitted by:** Leo Samuel Gilbert
+**Submitted by:** Leo Samuel Gilbert  
 **Registration Number:** 2582402
 
 ---
@@ -42,55 +42,55 @@ This project combines these stages into a single AI-powered workflow.
 
 ### 1. Poster / Notice Processing
 
-* Upload university event posters through the Streamlit interface.
-* Process poster images using OCR.
-* Preserve the original poster for optional email attachment.
-* Extract textual information from the uploaded notice.
+- Upload university event posters through the Streamlit interface.
+- Process poster images using OCR.
+- Preserve the original poster for optional email attachment.
+- Extract textual information from the uploaded notice.
 
 ### 2. Vision Language Model Analysis
 
-* Analyse the poster using a local vision-capable model.
-* Use visual information to understand poster layout, hierarchy, and relationships between text elements.
-* Combine visual information with OCR output during metadata extraction.
-* Treat OCR as the primary source for exact textual information.
+- Analyse the poster using a local vision-capable model.
+- Use visual information to understand poster layout, hierarchy, and relationships between text elements.
+- Combine visual information with OCR output during metadata extraction.
+- Treat OCR as the primary source for exact textual information.
 
 ### 3. Structured Metadata Extraction
 
 Poster information is converted into structured metadata containing fields such as:
 
-* Poster type
-* Title
-* Department
-* University
-* Description
-* Short summary
-* Event date
-* Important dates
-* Venue
-* Registration deadline
-* Registration link
-* Guest speakers
-* Contact person
-* Contact phone
-* Email
-* Eligibility
-* Target audience
-* Keywords
-* Other information
+- Poster type
+- Title
+- Department
+- University
+- Description
+- Short summary
+- Event date
+- Important dates
+- Venue
+- Registration deadline
+- Registration link
+- Guest speakers
+- Contact person
+- Contact phone
+- Email
+- Eligibility
+- Target audience
+- Keywords
+- Other information
 
 The extraction process uses source-grounded prompting to reduce unsupported information generation.
 
 Target audience classification uses:
 
-* `Explicit`
-* `Inferred`
-* `Default`
+- `Explicit`
+- `Inferred`
+- `Default`
 
 ### 4. Poster Summarization
 
-* Generate a concise summary from the extracted poster information.
-* Use the summary as additional context for later personalized communication.
-* Keep the summary grounded in the poster content.
+- Generate a concise summary from the extracted poster information.
+- Use the summary as additional context for later personalized communication.
+- Keep the summary grounded in the poster content.
 
 ### 5. Retrieval-Augmented Generation (RAG)
 
@@ -114,11 +114,11 @@ The RAG workflow retrieves relevant poster information and provides answers base
 
 ### 6. Student Matching
 
-* Upload student information through an Excel file.
-* Compare student information with the extracted poster metadata.
-* Identify students relevant to the event.
-* Use information such as programme, department, level, and interests for matching.
-* Display student matching information through the application.
+- Upload student information through an Excel file.
+- Compare student information with the extracted poster metadata.
+- Identify students relevant to the event.
+- Use information such as programme, department, level, and interests for matching.
+- Display student matching information through the application.
 
 ### 7. Personalized Email Generation
 
@@ -138,19 +138,19 @@ Personalized Email Draft
 
 Each generated communication can contain:
 
-* Recipient
-* Subject
-* Personalized email body
-* Event-specific information
+- Recipient
+- Subject
+- Personalized email body
+- Event-specific information
 
 Generated emails are presented for review before delivery.
 
 ### 8. Local AI Image Generation
 
-* Generate a supporting image related to the event.
-* Use local Stable Diffusion for image generation.
-* Associate the generated image with the personalized communication.
-* Display the generated image during the email review stage.
+- Generate a supporting image related to the event.
+- Use local Stable Diffusion for image generation.
+- Associate the generated image with the personalized communication.
+- Display the generated image during the email review stage.
 
 ### 9. Email Review and Confirmation
 
@@ -158,71 +158,73 @@ Before sending, the application displays the communication for review.
 
 The review stage includes:
 
-* Recipient
-* Subject
-* Personalized email body
-* Generated supporting image
-* Original poster attachment
+- Recipient
+- Subject
+- Personalized email body
+- Generated supporting image
+- Original poster attachment
 
 The communication proceeds to delivery only after confirmation.
 
 ### 10. Gmail SMTP Delivery
 
-* Send confirmed personalized emails using Gmail SMTP.
-* Include the generated supporting image.
-* Optionally attach the original university poster.
-* Display the sending result through the application.
+- Send confirmed personalized emails using Gmail SMTP.
+- Include the generated supporting image.
+- Optionally attach the original university poster.
+- Display the sending result through the application.
 
 ---
 
 ## 🏗️ System Architecture
+![Architecture](docs/architecture/architecture.png)
 
-![Architecture](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/architecture/architecture.png)
+---
 
 ```text
-                     University Poster
+                    University Poster
                            |
                            v
-                     OCR / Text Extraction
+                    OCR / Text Extraction
                            |
                            v
-                  Vision Language Analysis
+                 Vision Language Analysis
                            |
                            v
-                   Metadata Extraction
+                  Metadata Extraction
                            |
                            +------------------+
                            |                  |
                            v                  v
                     Poster Summary      RAG Question
-                                           Answering
+                                             Answering
                            |                  |
                            +--------+---------+
                                     |
                                     v
-                            Student Information
+                           Student Information
                                     |
                                     v
-                            Student Matching
+                           Student Matching
                                     |
                                     v
-                     Personalized Email Generation
+                    Personalized Email Generation
                                     |
                                     v
-                          Local Image Generation
+                         Local Image Generation
                                     |
                                     v
-                        Complete Email Review
+                       Complete Email Review
                                     |
                                     v
-                           User Confirmation
+                          User Confirmation
                                     |
                                     v
-                              Gmail SMTP
+                             Gmail SMTP
                                     |
                                     v
-                          Email Delivery Status
+                         Email Delivery Status
 ```
+
 
 ### Critical Workflow Order
 
@@ -252,22 +254,22 @@ Gmail SMTP
 
 ## 🧩 Technology Stack
 
-| Component                    | Technology                  |
-| ---------------------------- | --------------------------- |
-| Programming Language         | Python                      |
-| Web Application              | Streamlit                   |
-| OCR                          | EasyOCR                     |
-| Vision / Multimodal Analysis | Gemma 3                     |
-| Local LLM                    | Gemma 3 through Ollama      |
-| Metadata Extraction          | Local LLM + Structured JSON |
-| RAG                          | LangChain + Chroma          |
-| Embeddings                   | Ollama Embeddings           |
-| Vector Database              | Chroma                      |
-| Student Data                 | Excel                       |
-| Data Processing              | Pandas                      |
-| Image Generation             | Stable Diffusion            |
-| Email Generation             | Local LLM                   |
-| Email Delivery               | Gmail SMTP                  |
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| Web Application | Streamlit |
+| OCR | EasyOCR |
+| Vision / Multimodal Analysis | Gemma 3 |
+| Local LLM | Gemma 3 through Ollama |
+| Metadata Extraction | Local LLM + Structured JSON |
+| RAG | LangChain + Chroma |
+| Embeddings | Ollama Embeddings |
+| Vector Database | Chroma |
+| Student Data | Excel |
+| Data Processing | Pandas |
+| Image Generation | Stable Diffusion |
+| Email Generation | Local LLM |
+| Email Delivery | Gmail SMTP |
 
 ---
 
@@ -281,15 +283,15 @@ The application accepts a university event poster through the Streamlit interfac
 
 OCR extracts information from the poster, including:
 
-* Event title
-* University
-* Department
-* Dates
-* Venue
-* Registration information
-* Contact information
-* Eligibility
-* Other event details
+- Event title
+- University
+- Department
+- Dates
+- Venue
+- Registration information
+- Contact information
+- Eligibility
+- Other event details
 
 OCR is treated as the primary textual source for exact information.
 
@@ -297,10 +299,10 @@ OCR is treated as the primary textual source for exact information.
 
 The Vision Language Model provides supplementary information about:
 
-* Poster structure
-* Visual hierarchy
-* Relationships between text elements
-* Information that may not have been captured correctly by OCR
+- Poster structure
+- Visual hierarchy
+- Relationships between text elements
+- Information that may not have been captured correctly by OCR
 
 The OCR and VLM outputs are combined during metadata extraction.
 
@@ -353,10 +355,10 @@ Student information is uploaded through Excel and compared with the event inform
 
 The matching process uses information such as:
 
-* Programme
-* Department
-* Level
-* Interests
+- Programme
+- Department
+- Level
+- Interests
 
 The target audience extracted from the poster is also used as part of the event information available for student matching.
 
@@ -416,39 +418,31 @@ Original Poster Attachment
 ├── LICENSE
 ├── requirements.txt
 ├── app.py
-├── forge_info.txt
 ├── src/
-│   ├── __init__.py
-│   ├── document_processing/
-│   ├── email/
-│   ├── extraction/
-│   ├── rag/
-│   ├── student_filtering/
-│   ├── summarization/
-│   └── vision/
 ├── tests/
 └── docs/
-    ├── Screenshots/
+    ├── screenshots/
+    │   ├── home_page.png
+    │   ├── upload_student_excel.png
+    │   ├── upload_poster_with_credentials.png
     │   ├── Poster_metadata.png
+    │   ├── rag_question.png
+    │   ├── rag-question_answer.png
     │   ├── email_generator_1.png
     │   ├── generated_image.png
-    │   ├── home_page.png
     │   ├── mail_attachment_confirmation.png
-    │   ├── mail_gmail_received.png
-    │   ├── mail_send_confirmation.png
-    │   ├── rag_question.png
-    │   ├── rag_question_answer.png
     │   ├── review_email_drafts.png
     │   ├── send_mail.png
-    │   ├── upload_poster_interface_with_credentials.png
-    │   └── upload_student_excel.png
+    │   ├── mail_send_confirmation.png
+    │   └── mail_gmail_received.png
     ├── architecture/
     │   └── architecture.png
-    └── demo/
-        └── demo.mp4
+    ├── demo/
+    │   └── demo.mp4
+    └── data/
 ```
 
-The `docs/Screenshots/` directory contains the application interface screenshots used in this documentation.
+The `docs/screenshots/` directory contains the application interface screenshots used in this documentation.
 
 ---
 
@@ -614,63 +608,60 @@ Delivered Email
 
 ### 1. Home Page
 
-![Home Page](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/home_page.png)
+![Home Page](docs/Screenshots/home_page.png)
 
 ### 2. Upload Poster and Credentials
 
-![Upload Poster Interface](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/upload_poster_interface_with_credentials.png)
+![Upload Poster Interface](docs/Screenshots/upload_poster_interface_with_credentials.png)
 
 ### 3. Upload Student Excel File
 
-![Upload Student Excel](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/upload_student_excel.png)
+![Upload Student Excel](docs/Screenshots/upload_student_excel.png)
 
 ### 4. Extracted Poster Metadata
 
-![Poster Metadata](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/Poster_metadata.png)
+![Poster Metadata](docs/Screenshots//Poster_metadata.png)
 
 ### 5. RAG Question
 
-![RAG Question](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/rag_question.png)
+![RAG Question](docs/Screenshots/rag_question.png)
 
 ### 6. RAG Question Answer
 
-![RAG Question Answer](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/rag_question_answer.png)
+![RAG Question Answer](docs/Screenshots/rag_question_answer.png)
 
 ### 7. Generated Personalized Email
 
-![Email Generator](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/email_generator_1.png)
+![Email Generator](docs/Screenshots/email_generator_1.png)
 
 ### 8. Review Email Drafts
 
-![Review Email Drafts](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/review_email_drafts.png)
+![Review Email Drafts](docs/Screenshots/review_email_drafts.png)
 
 ### 9. Generated AI Image
 
-![Generated AI Image](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/generated_image.png)
+![Generated AI Image](docs/Screenshots/generated_image.png)
 
 ### 10. Send Mail Confirmation
 
-![Send Mail Confirmation](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/mail_send_confirmation.png)
+![Send Mail Confirmation](docs/Screenshots/mail_send_confirmation.png)
 
 ### 11. Gmail Received Email
 
-![Gmail Received Email](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/mail_gmail_received.png)
+![Gmail Received Email](docs/Screenshots/mail_gmail_received.png)
 
-### 12. Mail Attachment Confirmation
-
-![Mail Attachment Confirmation](https://raw.githubusercontent.com/CHRIST-SDS/2582402_AI-Powered-Intelligent-University-Notice-Distribution-System/main/docs/Screenshots/mail_attachment_confirmation.png)
+## 12. Mail Attachment Confirmation 
+![Mail Attachment Confirmation](docs/Screenshots/mail_attachment_confirmation.png)
 
 ---
 
-## 🎬 Project Demonstration
+## Project Demonstration
 
 A complete end-to-end demonstration of the AI-Powered Intelligent University Notice Distribution System is available here:
 
 **[▶️ View Demo Video](demo/demo.mp4)**
 
 The demonstration covers poster upload, OCR and vision processing, metadata extraction, RAG question answering, student matching, personalized email generation, local AI image generation, email review, user confirmation, and Gmail delivery.
-
----
 
 ## 🔐 Security
 
@@ -695,15 +686,15 @@ The Gmail App Password is used for SMTP authentication rather than storing a reg
 
 The complete workflow produces:
 
-* Structured poster metadata
-* Poster summary
-* Searchable poster information
-* RAG question-answering responses
-* Relevant student selection
-* Personalized email drafts
-* AI-generated supporting image
-* Reviewed email with attachments
-* Gmail delivery status
+- Structured poster metadata
+- Poster summary
+- Searchable poster information
+- RAG question-answering responses
+- Relevant student selection
+- Personalized email drafts
+- AI-generated supporting image
+- Reviewed email with attachments
+- Gmail delivery status
 
 The overall transformation is:
 
@@ -712,19 +703,19 @@ Unstructured University Poster
               ↓
        Structured Metadata
               ↓
-          RAG + Summary
+        RAG + Summary
               ↓
-        Relevant Students
+       Relevant Students
               ↓
-      Personalized Email
+     Personalized Email
               ↓
-        AI-Generated Image
+       AI-Generated Image
               ↓
-         Human Review
+        Human Review
               ↓
-      Confirmed Communication
+     Confirmed Communication
               ↓
-          Gmail Delivery
+         Gmail Delivery
 ```
 
 ---
@@ -746,7 +737,7 @@ Unstructured University Poster
 
 ## 👤 Author
 
-**Leo Samuel Gilbert**
+**Leo Samuel Gilbert**  
 **Registration Number:** 2582402
 
 ---
